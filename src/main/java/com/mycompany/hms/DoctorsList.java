@@ -72,4 +72,34 @@ public class DoctorsList {
             temp=temp.pre;
         }
     }
+    
+    public Doctor getAtIndex(int index){
+        DNode temp= head;
+        for (int i=0;i<index;i++){
+            temp=temp.pre;
+            
+        }
+        return temp.doctor;
+    }
+    
+    public int size(){
+        DNode temp=head;
+        int count=0;
+        while(temp!=null){
+            count++;
+            temp=temp.pre;
+        }
+        return count;
+    }
+    
+    public void PrintData(){
+        DNode temp=head;
+        int count=0;
+        while(temp!=null){
+            count++;
+            System.out.println(count+"  "+temp.doctor.toString());
+            temp=temp.pre;
+                    
+        }
+    }
 }
